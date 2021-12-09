@@ -36,7 +36,7 @@
     </script> -->
 
     <!--OneSignal PUSH SERVICE--> 
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <!-- <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     <script>
       window.OneSignal = window.OneSignal || [];
       OneSignal.push(function() {
@@ -44,9 +44,19 @@
           appId: "de972413-8f68-47ba-a328-a2e945c8cc0b",
         });
      });
-    </script>
+    </script> -->
 
-
+    <!--Boostools PUSH SERVICE-->
+    <script type="text/javascript">
+        (function(w,e,b) {
+            e=w.createElement('script');
+            e.type='text/javascript';
+            e.async=true;
+            e.src='https://cdn.boostools.app/js/v9shRf-ZnweeNxqspsh6NV4ZHruIBfaG.js';
+            b=w.getElementsByTagName('script')[0];
+            b.parentNode.insertBefore(e,b);
+        })(document);
+    </script>	
 
 </head>
 <body>
@@ -68,17 +78,7 @@
         </tr>
     </table>
 
-    <!--Boostools PUSH SERVICE-->
-    <script type="text/javascript">
-        (function(w,e,b) {
-            e=w.createElement('script');
-            e.type='text/javascript';
-            e.async=true;
-            e.src='https://cdn.boostools.app/js/v9shRf-ZnweeNxqspsh6NV4ZHruIBfaG.js';
-            b=w.getElementsByTagName('script')[0];
-            b.parentNode.insertBefore(e,b);
-        })(document);
-    </script>	
+
 
 
 </body>
