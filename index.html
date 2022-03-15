@@ -30,7 +30,8 @@
                 command: "print",
                 sentence: "Hello Service Worker!"
             };
-            Worker.postMessage(msg, '*');
+            // client.postMessage(msg, '*');
+            navigator.serviceWorker.postMessage(msg, '*');
         }
     </script>
 </head>
