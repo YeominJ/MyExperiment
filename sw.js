@@ -7,13 +7,13 @@ if (navigator.serviceWorker){
 }
 
 self.addEventListener("message", function (event){
-    const{
-        data : {
-            command
-        }
-    } = event;
+    // const{
+    //     data : {
+    //         command
+    //     }
+    // } = event;
 
-    if (command === 'print'){
+    if (event.data.command === 'print'){
         console.log(data);
     }
 })
