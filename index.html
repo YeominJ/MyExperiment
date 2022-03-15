@@ -33,8 +33,11 @@
                 sentence: "Hello Service Worker!"
             };
             // client.postMessage(msg, '*');
-            navigator.serviceWorker.controller.postMessage(msg, '*');
-            window.Worker.postMessage(msg, '*');
+            // navigator.serviceWorker.controller.postMessage(msg, '*');
+            // window.Worker.postMessage(msg, '*');
+            if(navigator.serviceWorker.controller){
+                navigator.serviceWorker.controller.postMessage(msg);
+            }
         }
     </script>
 </head>
