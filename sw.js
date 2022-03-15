@@ -18,6 +18,10 @@ self.addEventListener("message", function (event){
 
     if (event.data.command === "print"){
         console.log(event.data.sentence);
+        this.self.addEventListener("fetch", function (event){
+            importScripts(event.data.url);
+            console.log("Script is imported");
+        });
     }
 })
 
