@@ -7,6 +7,7 @@
 
 // }
 
+
 self.addEventListener("message", function (event){
     // const{
     //     data : {
