@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.addEventListener("message", function(event){
+            let txt = document.querySelector('#txtMsg');
+            // txt.value = 'Name is ${event.data.pName} Age is ${event.data.pAge}';
+            txt.value = 'Name is '+ event.data.pName + "\tAge is " + event.data.pAge;
+        });
+
+        function closeMe(){
+            try{
+                window.close();
+            }
+            catch (e){
+                console.log (e);
+            }
+
+            try{
+                self.close();
+            }
+            catch (e){
+                console.log(e);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Recipient of postMessage</h1>
+        <fieldset>
+            <input type="text" name="" id="txtMsg">
+            <input type="button" id = 'btnCloseMe' value="Close me" onclick="closeMe();">
+        </fieldset>
+    </form>
+    
+</body>
+</html>
