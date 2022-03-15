@@ -21,6 +21,6 @@ self.addEventListener("message", function (event){
     }
 })
 
-self.addEventListener('install', function (event) {
-    return event.waitUntil(self.skipWaiting());
-  });
+// self.addEventListener('install', function (event) {
+//     return event.waitUntil(self.skipWaiting());
+//   });
