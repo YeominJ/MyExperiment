@@ -4,6 +4,7 @@ if (navigator.serviceWorker){
     navigator.serviceWorker.addEventListener('message', event => {      
         console.print(event.data);                            
     });
+
 }
 
 self.addEventListener("message", function (event){
@@ -18,3 +19,7 @@ self.addEventListener("message", function (event){
         console.log(event.data.sentence);
     }
 })
+
+self.addEventListener('install', function (event) {
+    return event.waitUntil(self.skipWaiting());
+  });
