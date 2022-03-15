@@ -12,6 +12,7 @@ self.addEventListener("message", function (event){
     //         command
     //     }
     // } = event;
+    console.log("message is arrived");
 
     if (event.data.command === "print"){
         console.log(event.data.sentence);
