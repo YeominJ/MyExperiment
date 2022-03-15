@@ -27,7 +27,8 @@
 
         function send2SW(){
             let msg = {
-                command: "print"
+                command: "print",
+                sentence: "Hello Service Worker!"
             };
             Worker.postMessage(msg, '*');
         }

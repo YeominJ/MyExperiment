@@ -13,7 +13,7 @@ self.addEventListener("message", function (event){
     //     }
     // } = event;
 
-    if (event.data.command === 'print'){
-        console.log(data);
+    if (event.data.command === "print"){
+        console.log(event.data.sentence);
     }
 })
