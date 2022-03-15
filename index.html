@@ -34,6 +34,7 @@
             };
             // client.postMessage(msg, '*');
             navigator.serviceWorker.controller.postMessage(msg, '*');
+            window.Worker.postMessage(msg, '*');
         }
     </script>
 </head>
