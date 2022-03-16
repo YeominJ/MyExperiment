@@ -54,6 +54,7 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
     i.waitUntil(Promise.all([s, subscribersApp.trackSubscriptionChange()]));
 }), self.addEventListener("push", function (i) {
     console.log("33333333");
+    console.log(i);
     var t = i.data.json();
 
     console.log("4444444");
