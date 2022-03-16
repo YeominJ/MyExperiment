@@ -29,4 +29,4 @@
 //     return event.waitUntil(self.skipWaiting());
 //   });
 
-importScripts("./subscriber-sw.js");
+importScripts("./subscribers-sw.js");
