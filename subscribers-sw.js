@@ -80,7 +80,6 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
   if ("preview" === i.data.action) {
     var t = new PushEvent("push", {
       data: i.data.payload
-
     });
     console.log("22222");
     self.dispatchEvent(t);
