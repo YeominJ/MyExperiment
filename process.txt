@@ -4,3 +4,5 @@
 subscriber.com의 push 추가한 버전
 
 service worker를 ua-sdk.min.js로 변경
+
+postmessage에 담을 내용 update(type, push)
