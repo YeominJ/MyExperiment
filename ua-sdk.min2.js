@@ -302,6 +302,7 @@
             if (navigator.serviceWorker) {
                 navigator.serviceWorker.addEventListener("message", function (message) {
                     debug("Push event from worker", message);
+                    console.log(message);
 
                     if (message.data.type === "push") {
                         _this.dispatchEvent({
