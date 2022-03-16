@@ -2,3 +2,5 @@
 현재 버전 OK
 
 subscriber.com의 push 추가한 버전
+
+service worker를 ua-sdk.min.js로 변경
