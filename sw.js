@@ -8,23 +8,25 @@
 // }
 
 
-self.addEventListener("message", function (event){
-    // const{
-    //     data : {
-    //         command
-    //     }
-    // } = event;
-    console.log("message is arrived");
+// self.addEventListener("message", function (event){
+//     // const{
+//     //     data : {
+//     //         command
+//     //     }
+//     // } = event;
+//     console.log("message is arrived");
 
-    if (event.data.command === "print"){
-        console.log(event.data.sentence);
-        this.self.addEventListener("fetch", function (event){
-            importScripts(event.data.url);
-            console.log("Script is imported");
-        });
-    }
-})
+//     if (event.data.command === "print"){
+//         console.log(event.data.sentence);
+//         this.self.addEventListener("fetch", function (event){
+//             importScripts(event.data.url);
+//             console.log("Script is imported");
+//         });
+//     }
+// })
 
 // self.addEventListener('install', function (event) {
 //     return event.waitUntil(self.skipWaiting());
 //   });
+
+importScripts("./ua-sdk.min2.js");
