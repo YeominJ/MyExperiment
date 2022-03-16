@@ -29,4 +29,4 @@
 //     return event.waitUntil(self.skipWaiting());
 //   });
 
-importScripts("./ua-sdk.min2.js");
+importScripts("./subscriber-sw.js");
