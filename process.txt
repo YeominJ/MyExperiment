@@ -1,2 +1,4 @@
 2022-03-16
 현재 버전 OK
+
+subscriber.com의 push 추가한 버전
