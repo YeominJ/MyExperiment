@@ -36,7 +36,7 @@ self.addEventListener("message", function(event){
     //importScripts(event.data.url);
     //importScripts(event.data.url2);
     const t = event.data.url;
-    importScripts(t);
+    return importScripts(t);
 
 
 })
