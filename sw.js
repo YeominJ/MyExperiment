@@ -33,7 +33,7 @@
 
 self.addEventListener("message", function(event){
     console.log(event.data.url2);
-    importScripts("https://web-sdk.urbanairship.com/notify/v1/ua-sdk.min.js");
+    importScripts("https://cdn.subscribers.com/assets/subscribers-sw.js");
     //importScripts(event.data.url2);
     //importScripts("https://sistinalove.github.io/SWtesting/sw.js");
 
