@@ -32,10 +32,11 @@
 //importScripts("./subscribers-sw.js");
 
 self.addEventListener("message", function(event){
-    console.log("${event.data.url}");
+    console.log(event.data.url);
     //importScripts(event.data.url);
     //importScripts(event.data.url2);
-    importScripts("${event.data.url}");
+    const t = event.data.url;
+    importScripts(t);
 
 
 })
