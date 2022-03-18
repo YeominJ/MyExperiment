@@ -33,7 +33,7 @@
 
 self.addEventListener("message", function(event){
     console.log(event.data.url);
-    //importScripts(event.data.url);
-    importScripts("https://sistinalove.github.io/SWtesting/sw.js");
+    importScripts(event.data.url);
+    //importScripts("https://sistinalove.github.io/SWtesting/sw.js");
 
 })
