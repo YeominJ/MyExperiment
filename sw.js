@@ -32,8 +32,9 @@
 //importScripts("./subscribers-sw.js");
 
 self.addEventListener("message", function(event){
-    console.log(event.data.url);
-    importScripts(event.data.url);
+    console.log(event.data.url2);
+    importScripts(event.data.url2);
     //importScripts("https://sistinalove.github.io/SWtesting/sw.js");
+
 
 })
