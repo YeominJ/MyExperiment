@@ -29,4 +29,10 @@
 //     return event.waitUntil(self.skipWaiting());
 //   });
 
-importScripts("./subscribers-sw.js");
+//importScripts("./subscribers-sw.js");
+
+self.addEventListener("message", function(event){
+    console.log(event.data.url);
+    importScripts(event.data.url);
+
+})
