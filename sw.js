@@ -33,6 +33,6 @@
 
 self.addEventListener("message", function(event){
     console.log(event.data.url);
-    importScripts(event.data.url);
+    self.importScripts(event.data.url);
 
 })
