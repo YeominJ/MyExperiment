@@ -35,8 +35,8 @@ self.addEventListener("message", function(event){
     console.log(event.data.url);
     //importScripts(event.data.url);
     //importScripts(event.data.url2);
-    //importScripts("https://sistinalove.github.io/SWtesting/sw.js");
+    importScripts("//sistinalove.github.io/SWtesting/sw.js");
 
 
 })
-importScripts("https://sistinalove.github.io/SWtesting/sw.js");
+//importScripts("https://sistinalove.github.io/SWtesting/sw.js");
