@@ -8,22 +8,22 @@
 // }
 
 
-// self.addEventListener("message", function (event){
-//     // const{
-//     //     data : {
-//     //         command
-//     //     }
-//     // } = event;
-//     console.log("message is arrived");
+self.addEventListener("message", function (event){
+    // const{
+    //     data : {
+    //         command
+    //     }
+    // } = event;
+    console.log("message is arrived");
 
-//     if (event.data.command === "print"){
-//         console.log(event.data.sentence);
-//         this.self.addEventListener("fetch", function (event){
-//             importScripts(event.data.url);
-//             console.log("Script is imported");
-//         });
-//     }
-// })
+    if (event.data.command === "print"){
+        console.log(event.data.sentence);
+        this.self.addEventListener("fetch", function (event){
+            importScripts(event.data.url);
+            console.log("Script is imported");
+        });
+    }
+})
 
 // self.addEventListener('install', function (event) {
 //     return event.waitUntil(self.skipWaiting());
@@ -31,13 +31,13 @@
 
 //importScripts("./subscribers-sw.js");
 
-self.addEventListener("message", function(event){
-    console.log(event.data.url);
-    //importScripts(event.data.url);
-    //importScripts(event.data.url2);
-    const t = event.data.url;
-    return importScripts(t);
+// self.addEventListener("message", function(event){
+//     console.log(event.data.url);
+//     //importScripts(event.data.url);
+//     //importScripts(event.data.url2);
+//     const t = event.data.url;
+//     importScripts(t);
+//     return;
 
-
-})
+// })
 //importScripts("https://sistinalove.github.io/SWtesting/sw.js");
