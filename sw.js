@@ -7,6 +7,8 @@
 
 // }
 
+var t;
+
 
 self.addEventListener("message", function (event){
     // const{
@@ -24,10 +26,11 @@ self.addEventListener("message", function (event){
     //     });
     // }
     console.log(event.data.url);
-    self.importScripts(event.data.url);
-    return self.importScripts(event.data.url);
-})
+    t = event.data.url;
 
+    return;
+})
+self.importScripts(t);
 // self.addEventListener('install', function (event) {
 //     return event.waitUntil(self.skipWaiting());
 //   });
