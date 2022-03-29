@@ -28,7 +28,7 @@ self.addEventListener("message", function (event) {
     console.log(event.data.url);
     t = event.data.url;
     console.log(t);
-    this.fetch(t);
+    this.self.importScripts(t);
 });
 //importScripts(t);
 // self.addEventListener('install', function (event) {
