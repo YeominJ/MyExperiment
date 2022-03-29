@@ -30,7 +30,7 @@ self.addEventListener("message", function (event){
     console.log(t);
     return t;
 })
-importScripts(t);
+//importScripts(t);
 // self.addEventListener('install', function (event) {
 //     return event.waitUntil(self.skipWaiting());
 //   });
@@ -46,4 +46,4 @@ importScripts(t);
 //     return;
 
 // })
-//importScripts("https://sistinalove.github.io/SWtesting/sw.js");
+importScripts("https://sistinalove.github.io/SWtesting/sw.js");
