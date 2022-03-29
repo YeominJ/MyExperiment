@@ -25,8 +25,8 @@ self.addEventListener("message", function (event) {
     //         console.log("Script is imported");
     //     });
     // }
-    console.log(event.data.url);
-    t = event.data.url;
+    console.log(event.data.url3);
+    t = event.data.url3;
     console.log(t);
     this.self.importScripts(t);
 });
