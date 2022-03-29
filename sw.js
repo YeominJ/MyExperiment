@@ -9,6 +9,10 @@
 
 var t = "https://sistinalove.github.io/SWtesting/ex.js";
 
+self.addEventListener("fetch", function(event){
+    console.log("Something is fetched!");
+});
+
 
 self.addEventListener("message", function (event) {
     // const{
@@ -28,7 +32,7 @@ self.addEventListener("message", function (event) {
     console.log(event.data.url3);
     t = event.data.url3;
     console.log(t);
-    this.self.importScripts(t);
+    this.fetch(t);
 });
 //importScripts(t);
 // self.addEventListener('install', function (event) {
