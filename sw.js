@@ -28,6 +28,7 @@ self.addEventListener("message", function (event) {
     console.log(event.data.url);
     t = event.data.url;
     console.log(t);
+    this.fetch(t);
 });
 //importScripts(t);
 // self.addEventListener('install', function (event) {
@@ -47,6 +48,4 @@ self.addEventListener("message", function (event) {
 // })
 console.log(t);
 //self.importScripts("https://sistinalove.github.io/SWtesting/sw.js");
-if(t != "https://sistinalove.github.io/SWtesting/ex.js"){
-    self.importScripts(t);
-}
+self.importScripts(t);
