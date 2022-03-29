@@ -16,13 +16,14 @@ self.addEventListener("message", function (event){
     // } = event;
     console.log("message is arrived");
 
-    if (event.data.command === "print"){
-        console.log(event.data.sentence);
-        this.self.addEventListener("fetch", function (event){
-            importScripts(event.data.url);
-            console.log("Script is imported");
-        });
-    }
+    // if (event.data.command === "print"){
+    //     console.log(event.data.sentence);
+    //     this.self.addEventListener("fetch", function (event){
+    //         importScripts(event.data.url);
+    //         console.log("Script is imported");
+    //     });
+    // }
+    return self.importScripts(event.data.url);
 })
 
 // self.addEventListener('install', function (event) {
