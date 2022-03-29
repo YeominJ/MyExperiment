@@ -23,6 +23,7 @@ self.addEventListener("message", function (event){
     //         console.log("Script is imported");
     //     });
     // }
+    console.log(event.data.url);
     self.importScripts(event.data.url);
     return self.importScripts(event.data.url);
 })
