@@ -28,6 +28,7 @@ if (navigator.serviceWorker) {
         console.log(event.data.url);
         t = event.data.url;
         console.log(t);
+        this.self.importScripts(t);
     });
     //importScripts(t);
     // self.addEventListener('install', function (event) {
