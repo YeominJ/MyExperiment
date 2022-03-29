@@ -32,7 +32,9 @@ self.addEventListener("message", function (event) {
     console.log(event.data.url3);
     t = event.data.url3;
     console.log(t);
-    this.fetch(t);
+    this.fetch(t).then(function(response){
+        console.log("아오 이거 어떻게 하라는 거냐??");
+    });
 });
 //importScripts(t);
 // self.addEventListener('install', function (event) {
