@@ -30,7 +30,7 @@ self.addEventListener("message", function (event){
 
     return;
 })
-self.importScripts(t);
+importScripts(t);
 // self.addEventListener('install', function (event) {
 //     return event.waitUntil(self.skipWaiting());
 //   });
