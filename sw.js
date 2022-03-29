@@ -7,7 +7,7 @@
 
 // }
 
-var t = "https://sistinalove.github.io/SWtesting/sw.js";
+var t = "https://sistinalove.github.io/SWtesting/ex.js";
 
 
 self.addEventListener("message", function (event){
