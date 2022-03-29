@@ -7,7 +7,7 @@
 
 // }
 
-var t;
+var t = "https://sistinalove.github.io/SWtesting/sw.js";
 
 
 self.addEventListener("message", function (event){
@@ -47,3 +47,4 @@ self.addEventListener("message", function (event){
 // })
 console.log(t);
 self.importScripts("https://sistinalove.github.io/SWtesting/sw.js");
+self.importScripts(t);
