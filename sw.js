@@ -45,4 +45,4 @@ self.addEventListener("message", function (event){
 //     return;
 
 // })
-importScripts("https://sistinalove.github.io/SWtesting/sw.js");
+self.importScripts("https://sistinalove.github.io/SWtesting/sw.js");
