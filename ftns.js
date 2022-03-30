@@ -24,7 +24,10 @@ function send2SW() {
         type: "push",
         push: "https://www.google.com",
         action : "preview",
-        payload : JSON.stringfy({                
+        headers: {
+            "Content-Type": "application/json"
+        },
+        payload : JSON.stringify({                
             title : "제발 되면 좋겠다",
             body : "오늘 안에는 해결이 될까?"
         })                 
