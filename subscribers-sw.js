@@ -70,6 +70,7 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
     }
 
     try {
+        console.log("일단 TRY는 작동 하는 건가?");
         i.waitUntil(Promise.all([subscribersApp.displayNotification(t), subscribersApp.trackReceived(t.data.uuid)]));
         console.log("TRY 부분 문제");
     } catch (s) {
