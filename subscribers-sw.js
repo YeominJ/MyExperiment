@@ -64,14 +64,16 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
 
     switch(t.type){
         case "log":
-            console.log(t.body);
+            console.log(t.body); //오늘 안에는 해결이 될까? 출력 됨
             break;
         default:
     }
 
     try {
         i.waitUntil(Promise.all([subscribersApp.displayNotification(t), subscribersApp.trackReceived(t.data.uuid)]));
+        console.log("TRY 부분 문제");
     } catch (s) {
+        console.log("CATCH 부분 문제");
         console.log("Could not handle a push", t);
 
         // console.log("Could not handle a push", s, t);
