@@ -27,12 +27,12 @@ function send2SW() {
         headers: {
             "Content-Type": "application/json"
         },
-        payload : {                
+        payload : JSON.stringify({                
             title : "제발 되면 좋겠다",
             body : "오늘 안에는 해결이 될까?",
             type : "log",
             uuid : "031125"
-        }                
+        })                 
     };
 
     // 서비스 워커가 있으면 DOM -> SW로 MSG 보내기
