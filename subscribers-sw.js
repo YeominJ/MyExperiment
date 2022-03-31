@@ -56,8 +56,8 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
     console.log("33333333");
     console.log(i.data);
     console.log(i.data.title);
-    var t = i.data.text();
-   // var t = i.data.json();
+    //var t = i.data.text();
+    var t = i.data.json();
 
    console.log(t);
 
