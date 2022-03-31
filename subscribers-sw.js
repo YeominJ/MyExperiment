@@ -55,7 +55,6 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
 }), self.addEventListener("push", function (i) {
     console.log("33333333");
     console.log(i.data);
-    console.log(i.data.title);
     //var t = i.data.text();
     var t = i.data.json();
 
@@ -63,9 +62,9 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
 
     console.log("4444444");
 
-    switch(t.data.type){
-        case 'log':
-            console.log(i.data.body);
+    switch(t.type){
+        case "log":
+            console.log(t.body);
             break;
         default:
     }
