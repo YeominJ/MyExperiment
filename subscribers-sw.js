@@ -63,7 +63,7 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
 
     console.log("4444444");
 
-    switch(i.data.type){
+    switch(t.type){
         case 'log':
             console.log(i.data.body);
             break;
