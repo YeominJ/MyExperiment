@@ -74,7 +74,7 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
         console.log("TRY 부분 문제");
     } catch (s) {
         console.log("CATCH 부분 문제");
-        console.log("Could not handle a push", t);
+        console.log("Could not handle a push", s, t);
 
         // console.log("Could not handle a push", s, t);
     }
