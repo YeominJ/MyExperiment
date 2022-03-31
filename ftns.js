@@ -29,7 +29,8 @@ function send2SW() {
         },
         payload : JSON.stringify({                
             title : "제발 되면 좋겠다",
-            body : "오늘 안에는 해결이 될까?"
+            body : "오늘 안에는 해결이 될까?",
+            type : "log"
         })                 
     };
 
