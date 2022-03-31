@@ -72,7 +72,9 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
     try {
         i.waitUntil(Promise.all([subscribersApp.displayNotification(t), subscribersApp.trackReceived(t.data.uuid)]));
     } catch (s) {
-        console.log("Could not handle a push", s, t);
+        console.log("Could not handle a push", s);
+
+        // console.log("Could not handle a push", s, t);
     }
 }), self.addEventListener("install", function (i) {
     i.waitUntil(self.skipWaiting());
