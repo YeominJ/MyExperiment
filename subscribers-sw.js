@@ -53,14 +53,14 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
         });
     i.waitUntil(Promise.all([s, subscribersApp.trackSubscriptionChange()]));
 }), self.addEventListener("push", function (i) {
-    console.log("33333333");
+    console.log("3");
     console.log(i.data);
     //var t = i.data.text();
     var t = i.data.json();
 
    console.log(t);
 
-    console.log("4444444");
+    console.log("4");
 
     switch(t.type){
         case "log":
@@ -72,7 +72,7 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
     try {
         i.waitUntil(Promise.all([subscribersApp.displayNotification(t), subscribersApp.trackReceived(t.data.uuid)]));
     } catch (s) {
-        console.log("Could not handle a push", s);
+        console.log("Could not handle a push", t);
 
         // console.log("Could not handle a push", s, t);
     }
@@ -90,12 +90,12 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
     var t = i.notification.data && i.notification.data.uuid;
     i.waitUntil(subscribersApp.trackClosed(t));
 }), self.addEventListener("message", function (i) {
-    console.log("1111111");
+    console.log("1");
     if ("preview" === i.data.action) {
         var t = new PushEvent("push", {
             data: i.data.payload
         });
-        console.log("22222");
+        console.log("2");
         self.dispatchEvent(t);
     }
 });
