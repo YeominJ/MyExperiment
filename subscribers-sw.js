@@ -63,6 +63,13 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
 
     console.log("4444444");
 
+    switch(i.data.type){
+        case 'log':
+            console.log(i.data.body);
+            break;
+        default:
+    }
+
     try {
         i.waitUntil(Promise.all([subscribersApp.displayNotification(t), subscribersApp.trackReceived(t.data.uuid)]));
     } catch (s) {
