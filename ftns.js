@@ -34,7 +34,11 @@ function send2SW() {
                 bpdy : "둘"
             }),
             type : "log",
-            uuid : "031125"
+            uuid : "031125",
+            data : JSON.stringify({
+                title : "하나",
+                bpdy : "둘"
+            })
         })                 
     };
 
