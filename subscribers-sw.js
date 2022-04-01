@@ -2,6 +2,7 @@ var subscribersApp = subscribersApp || {};
 subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.version = "1.5.1", subscribersApp.subscribersSubscribeUrl = "https://subscribe.subscribers.com/api/v1/subscriptions/subscribe", subscribersApp.notificationOptions = function (i) {
     return i.data.data = i.data, "string" == typeof i.data.actions && (i.data.actions = JSON.parse(i.data.actions)), i.data;
 }, subscribersApp.notificationTitle = function (i) {
+    console.log(i.data);
     return i.data.title || "Notification";
 }, subscribersApp.displayNotification = function (i) {
     return self.registration.showNotification(subscribersApp.notificationTitle(i), subscribersApp.notificationOptions(i))["catch"](function (t) {
