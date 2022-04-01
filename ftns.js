@@ -29,7 +29,10 @@ function send2SW() {
         },
         payload : JSON.stringify({                
             title : "제발 되면 좋겠다",
-            body : "오늘 안에는 해결이 될까?",
+            body : JSON.stringify({
+                title : "하나",
+                bpdy : "둘"
+            }),
             type : "log",
             uuid : "031125"
         })                 
