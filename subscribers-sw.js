@@ -1,8 +1,12 @@
 var subscribersApp = subscribersApp || {};
-subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.version = "1.5.1", subscribersApp.subscribersSubscribeUrl = "https://subscribe.subscribers.com/api/v1/subscriptions/subscribe", subscribersApp.notificationOptions = function (i) {
+subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.version = "1.5.1", subscribersApp.subscribersSubscribeUrl = "https://subscribe.subscribers.com/api/v1/subscriptions/subscribe", 
+subscribersApp.notificationOptions = function (i) {
+    console.log(i.data + "\ti.data");
+    console.log(i + "\ti");
     return i.data.data = i.data, "string" == typeof i.data.actions && (i.data.actions = JSON.parse(i.data.actions)), i.data;
 }, subscribersApp.notificationTitle = function (i) {
-    console.log(i);
+    console.log(i.data + "\ti.data");
+    console.log(i + "\ti");
     return "Notification";
     // return i.data.title || "Notification";
 }, subscribersApp.displayNotification = function (i) {
