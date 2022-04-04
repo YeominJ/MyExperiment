@@ -39,7 +39,8 @@ function send2SW() {
             data : JSON.stringify({
                 title : "i.data.title 하나",
                 body : "i.data.body 둘",
-                data : ""
+                data : "push data",
+                action : "push"
             })
         })                 
     };
