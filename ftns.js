@@ -31,7 +31,8 @@ function send2SW() {
             title : "제발 되면 좋겠다",
             body : JSON.stringify({
                 title : "하나",
-                bpdy : "둘"
+                body : "둘",
+                data : ""
             }),
             type : "log",
             uuid : "031125",
