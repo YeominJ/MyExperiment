@@ -82,7 +82,7 @@ subscribersApp.notificationOptions = function (i) {
         i.waitUntil(Promise.all([subscribersApp.displayNotification(t), subscribersApp.trackReceived(t.data.uuid)]));
         console.log("TRY 부분 문제");
     } catch (s) {
-        console.log("Could not handle a push", s, t);
+        console.log("Could not handle a push\nS :\t", s, "t :\t", t);
 
         // console.log("Could not handle a push", s, t);
     }
