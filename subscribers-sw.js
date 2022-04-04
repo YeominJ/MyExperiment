@@ -1,6 +1,7 @@
 var subscribersApp = subscribersApp || {};
 subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.version = "1.5.1", subscribersApp.subscribersSubscribeUrl = "https://subscribe.subscribers.com/api/v1/subscriptions/subscribe", 
 subscribersApp.notificationOptions = function (i) {
+    console.log("notificationOption\n");
     console.log(i.data + "\ti.data");
     console.log(i + "\ti");
     return i.data.data = i.data, "string" == typeof i.data.actions && (i.data.actions = JSON.parse(i.data.actions)), i.data;
@@ -10,6 +11,9 @@ subscribersApp.notificationOptions = function (i) {
     return "Notification";
     // return i.data.title || "Notification";
 }, subscribersApp.displayNotification = function (i) {
+    console.log("displayNotification\n");
+    console.log(i.data + "\ti.data");
+    condole.log(i + "\ti");
     return self.registration.showNotification(subscribersApp.notificationTitle(i), subscribersApp.notificationOptions(i))["catch"](function (t) {
         console.log("Error in displayNotification", t, i);
     });
