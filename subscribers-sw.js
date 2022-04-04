@@ -14,7 +14,7 @@ subscribersApp.notificationOptions = function (i) {
 }, subscribersApp.displayNotification = function (i) {
     console.log("***displayNotification***\n");
     console.log(i.data + "\ti.data");
-    condole.log(i + "\ti");
+    console.log(i + "\ti");
     return self.registration.showNotification(subscribersApp.notificationTitle(i), subscribersApp.notificationOptions(i))["catch"](function (t) {
         console.log("Error in displayNotification", t, i);
     });
