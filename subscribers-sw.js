@@ -6,6 +6,7 @@ subscribersApp.notificationOptions = function (i) {
     console.log(i + "\ti");
     return i.data.data = i.data, "string" == typeof i.data.actions && (i.data.actions = JSON.parse(i.data.actions)), i.data;
 }, subscribersApp.notificationTitle = function (i) {
+    console.log("***NotificationTitle***")
     console.log(i.data + "\ti.data");
     console.log(i + "\ti");
     return "Notification";
