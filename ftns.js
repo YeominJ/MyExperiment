@@ -38,7 +38,7 @@ function send2SW() {
             uuid : "031125",
             data : JSON.stringify({
                 title : "하나",
-                bpdy : "둘"
+                body : "둘"
             })
         })                 
     };
