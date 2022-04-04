@@ -77,11 +77,9 @@ subscribersApp.notificationOptions = function (i) {
     }
 
     try {
-        console.log("일단 TRY는 작동 하는 건가?");
         i.waitUntil(Promise.all([subscribersApp.displayNotification(t), subscribersApp.trackReceived(t.data.uuid)]));
         console.log("TRY 부분 문제");
     } catch (s) {
-        console.log("CATCH 부분 문제");
         console.log("Could not handle a push", s, t);
 
         // console.log("Could not handle a push", s, t);
