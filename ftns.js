@@ -28,7 +28,7 @@ function send2SW() {
             "Content-Type": "application/json"
         },
         payload : JSON.stringify({                
-            title : "제발 되면 좋겠다",
+            title : "T.title",
             body : JSON.stringify({
                 title : "하나",
                 body : "둘",
