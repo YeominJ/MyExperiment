@@ -3,7 +3,8 @@ subscribersApp.trackingUrl = "https://hi.subscribers.com", subscribersApp.versio
     return i.data.data = i.data, "string" == typeof i.data.actions && (i.data.actions = JSON.parse(i.data.actions)), i.data;
 }, subscribersApp.notificationTitle = function (i) {
     console.log(i);
-    return i.data.title || "Notification";
+    return "Notification";
+    // return i.data.title || "Notification";
 }, subscribersApp.displayNotification = function (i) {
     return self.registration.showNotification(subscribersApp.notificationTitle(i), subscribersApp.notificationOptions(i))["catch"](function (t) {
         console.log("Error in displayNotification", t, i);
