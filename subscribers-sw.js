@@ -63,15 +63,12 @@ subscribersApp.notificationOptions = function (i) {
         });
     i.waitUntil(Promise.all([s, subscribersApp.trackSubscriptionChange()]));
 }), self.addEventListener("push", function (i) {
-    console.log("3");
-    console.log(i.data);
+    console.log('i.data\t' + i.data);
     //var t = i.data.text();
     var t = i.data.json("");
 
-    console.log(t);
-    console.log(t.title);
-
-    console.log("4");
+    console.log('T(i.data.json())\t' + t);
+    console.log('T.title\t' + t.title);
 
     switch(t.type){
         case "log":
