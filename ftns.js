@@ -37,8 +37,9 @@ function send2SW() {
             type : "log",
             uuid : "031125",
             data : JSON.stringify({
-                title : "하나",
-                body : "둘"
+                title : "i.data.title 하나",
+                body : "i.data.body 둘",
+                data : ""
             })
         })                 
     };
