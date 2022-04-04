@@ -30,9 +30,9 @@ function send2SW() {
         payload : JSON.stringify({                
             title : "T.title",
             body : JSON.stringify({
-                title : "하나",
-                body : "둘",
-                data : ""
+                title : "t.body.title",
+                body : "t.body.body",
+                data : "t.body.data"
             }),
             type : "log",
             uuid : "031125",
