@@ -20,7 +20,7 @@ self.addEventListener("message", function(event){
         var t = new PushEvent("push",{
             data : event.data.payload
         });
-        console.log("postMessage로 받은 Data로 Push 보내기", t.data);
+        console.log("postMessage로 받은 Data로 Push 보내기", t);
         this.self.dispatchEvent(t);
     }
     
@@ -31,5 +31,9 @@ self.addEventListener("message", function(event){
 });
 
 self.addEventListener("push", function(event){
+    const data = JSON.parse(event.data.text());
 
+    event.waitUntil(async function(){
+        
+    });
 });
