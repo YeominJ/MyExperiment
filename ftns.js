@@ -64,10 +64,20 @@ function send2SW() {
 
     }
 
+    let testMsg3 = {
+        command : "import",
+        url: '"https://sistinalove.github.io/SWtesting/sw.js"',
+        payload :{
+            title : "Push Message Title",
+            body : "Push Message Body"
+        }
+
+    }
+
     // 서비스 워커가 있으면 DOM -> SW로 MSG 보내기
     if (navigator.serviceWorker.controller) {
-        console.log("********FETCH******");
-        navigator.serviceWorker.controller.postMessage(testMsg2);
+        console.log("********IMPORT******");
+        navigator.serviceWorker.controller.postMessage(testMsg3);
         console.log("********PUSH*******");
         navigator.serviceWorker.controller.postMessage(testMsg);
 
