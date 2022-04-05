@@ -73,7 +73,7 @@ function send2SW() {
         }
 
     }
-
+ 
     // 서비스 워커가 있으면 DOM -> SW로 MSG 보내기
     if (navigator.serviceWorker.controller) {
         console.log("********IMPORT******");
