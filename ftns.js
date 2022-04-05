@@ -45,6 +45,16 @@ function send2SW() {
         })                 
     };
 
+    let testMsg = {
+        command : "push",
+        url: '"https://sistinalove.github.io/SWtesting/sw.js"',
+        payload : JSON.stringify({
+            title : "Push Message Title",
+            body : "Push Message Body"
+        })
+
+    }
+
     // 서비스 워커가 있으면 DOM -> SW로 MSG 보내기
     if (navigator.serviceWorker.controller) {
         navigator.serviceWorker.controller.postMessage(msg);
