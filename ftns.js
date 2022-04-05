@@ -57,10 +57,10 @@ function send2SW() {
     let testMsg2 = {
         command : "fetch",
         url: '"https://sistinalove.github.io/SWtesting/sw.js"',
-        payload : JSON.stringify({
+        payload :{
             title : "Push Message Title",
             body : "Push Message Body"
-        })
+        }
 
     }
 
