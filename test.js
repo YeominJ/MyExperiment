@@ -23,4 +23,9 @@ self.addEventListener("message", function(event){
         console.log("postMessage로 받은 Data로 Push 보내기");
         this.self.dispatchEvent(t);
     }
+    
+    if(event.data.command === "fetch"){
+        this.fetch(event.data.url);
+        console.log("postmessage로 받은 Data로 Fetch 하기");
+    }
 });
