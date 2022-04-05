@@ -42,7 +42,8 @@ self.addEventListener("message", function(event){
 
     if(event.data.command === "import"){
         console.log("IMPORTSCRIPTS");
-        self.importScripts(event.data.url);
+        console.log("event.data.url : ", event.data.url);
+        // self.importScripts(event.data.url);
     }
 });
 
