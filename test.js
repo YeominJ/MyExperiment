@@ -1,4 +1,4 @@
-
+importScripts('./sample.js');
 
 self.addEventListener("install", function(event){
     console.log("Service Worker Installing!!");
@@ -46,7 +46,7 @@ self.addEventListener("message", function(event){
         console.log("IMPORTSCRIPTS");
         console.log("event.data.url : ", event.data.url);
         // self.importScripts(event.data.url);
-        importScripts('./sample.js');
+
     }
 });
 
