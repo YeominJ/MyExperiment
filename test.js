@@ -33,6 +33,7 @@ self.addEventListener("message", function(event){
 self.addEventListener("push", function(event){
     const data = JSON.parse(event.data.text());
 
+
     event.waitUntil(async function(){
         
     });
