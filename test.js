@@ -32,9 +32,10 @@ self.addEventListener("message", function(event){
 
 self.addEventListener("push", function(event){
     const data = JSON.parse(event.data.text());
+    console.log(data);
 
 
-    event.waitUntil(async function(){
+    // event.waitUntil(async function(){
         
-    });
+    // });
 });
