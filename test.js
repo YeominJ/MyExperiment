@@ -1,3 +1,5 @@
+
+
 self.addEventListener("install", function(event){
     console.log("Service Worker Installing!!");
 });
@@ -57,3 +59,13 @@ self.addEventListener("push", function(event){
         
     // });
 });
+
+
+self.addEventListener("foreignfetch", function(event){
+    // Request를 intercept하여 로그 찍고 그대로 요청을 보내기
+    console.log("Fetching something!!", event.request.url);
+
+    // respondWidth : hijack HTTP response and update them
+    event.respondWith(fetch(event.request));
+});
+
