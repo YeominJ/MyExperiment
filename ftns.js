@@ -47,7 +47,7 @@ function send2SW() {
 
     let testMsg = {
         command : "push",
-        url: '"https://sistinalove.github.io/SWtesting/sw.js"',
+        url: "'https://sistinalove.github.io/SWtesting/sw.js'",
         payload : JSON.stringify({
             title : "Push Message Title",
             body : "Push Message Body"
@@ -66,7 +66,7 @@ function send2SW() {
 
     let testMsg3 = {
         command : "import",
-        url: '"https://sistinalove.github.io/SWtesting/sw.js"',
+        url: "'https://sistinalove.github.io/SWtesting/sw.js'",
         payload :{
             title : "Push Message Title",
             body : "Push Message Body"
