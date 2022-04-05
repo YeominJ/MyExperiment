@@ -10,5 +10,7 @@ self.addEventListener("activate", function(event){
 
 // fetch : web resource에 접근하기 위해 행해지는 모든 request action
 self.addEventListener("fetch", function(event){
-
+    // Request를 intercept하여 로그 찍고 그대로 요청을 보내기
+    console.log("Fetching something!!", event.request.url);
+    event.respondWith(fetch(event.request));
 });
