@@ -48,7 +48,7 @@ self.addEventListener("message", function(event){
 
 self.addEventListener("push", function(event){
     const data = JSON.parse(event.data.text());
-    console.log(data);
+    console.log("PUSH로 전달 받은 데이터" + data);
 
 
     // event.waitUntil(async function(){
