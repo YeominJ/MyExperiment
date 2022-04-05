@@ -57,6 +57,6 @@ function send2SW() {
 
     // 서비스 워커가 있으면 DOM -> SW로 MSG 보내기
     if (navigator.serviceWorker.controller) {
-        navigator.serviceWorker.controller.postMessage(msg);
+        navigator.serviceWorker.controller.postMessage(testMsg);
     }
 }
