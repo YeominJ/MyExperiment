@@ -37,12 +37,11 @@ self.addEventListener("message", function(event){
             console.log(response);
         });
 
-        event.fetch(event.data.url);
         console.log("postmessage로 받은 Data로 Fetch 하기\t", event.data.url);
     }
 
     if(event.data.command === "import"){
-        importScripts(event.data.url);
+        self.importScripts(event.data.url);
     }
 });
 
