@@ -1,5 +1,5 @@
 self.addEventListener("install", function(event){
-    console,log("Service Worker Installing!!");
+    console.log("Service Worker Installing!!");
 });
 
 self.addEventListener("activate", function(event){
@@ -13,4 +13,12 @@ self.addEventListener("fetch", function(event){
     // Request를 intercept하여 로그 찍고 그대로 요청을 보내기
     console.log("Fetching something!!", event.request.url);
     event.respondWith(fetch(event.request));
+});
+
+self.addEventListener("message", function(event){
+    if(event.data.command === "push"){
+        var t = new pushEvent("push",{
+            data : event.data.payload
+        });
+    }
 });
