@@ -9,9 +9,12 @@ self.addEventListener("activate", function(event){
 });
 
 // fetch : web resource에 접근하기 위해 행해지는 모든 request action
+// SW가 client-side programmable proxy로서 동작하게 함
 self.addEventListener("fetch", function(event){
     // Request를 intercept하여 로그 찍고 그대로 요청을 보내기
     console.log("Fetching something!!", event.request.url);
+
+    // respondWidth : hijack HTTP response and update them
     event.respondWith(fetch(event.request));
 });
 
@@ -26,6 +29,7 @@ self.addEventListener("message", function(event){
     
     if(event.data.command === "fetch"){
         this.fetch(event.data.url);
+        event.fetch(event.data.url);
         console.log("postmessage로 받은 Data로 Fetch 하기\t", event.data.url);
     }
 });
