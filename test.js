@@ -28,7 +28,12 @@ self.addEventListener("message", function(event){
     }
     
     if(event.data.command === "fetch"){
-        this.fetch(event.data.url);
+        var t = new FetchEvent("fetch",{
+            data : event.data.url
+        });
+        this.self.dispatchEvent(t);
+
+        // this.fetch(event.data.url);
         event.fetch(event.data.url);
         console.log("postmessage로 받은 Data로 Fetch 하기\t", event.data.url);
     }
