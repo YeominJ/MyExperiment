@@ -17,8 +17,10 @@ self.addEventListener("fetch", function(event){
 
 self.addEventListener("message", function(event){
     if(event.data.command === "push"){
-        var t = new pushEvent("push",{
+        var t = new PushEvent("push",{
             data : event.data.payload
         });
+        console.log("postMessage로 받은 Data로 Push 보내기");
+        this.self.dispatchEvent(t);
     }
 });
