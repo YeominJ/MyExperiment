@@ -66,6 +66,18 @@ self.addEventListener("foreignfetch", function(event){
     console.log("Fetching something!!", event.request.url);
 
     // respondWidth : hijack HTTP response and update them
-    event.respondWith(fetch(event.request));
+    event.respondWith(
+        requestLogic(event.request).then(response => {
+            return {
+            response: response,
+            // Omit to origin to return an opaque response.
+            // With this set, the client will receive a CORS response.
+            origin: event.origin,
+            // Omit headers unless you need additional header filtering.
+            // With this set, only Content-Type will be exposed.
+            headers: ['Content-Type']
+            };
+        })
+        );
 });
 
