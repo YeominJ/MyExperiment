@@ -80,4 +80,3 @@ self.addEventListener("foreignfetch", function(event){
         })
         );
 });
-
