@@ -44,6 +44,7 @@ self.addEventListener("message", function(event){
         console.log("IMPORTSCRIPTS");
         console.log("event.data.url : ", event.data.url);
         // self.importScripts(event.data.url);
+        importScripts('./sample.js');
     }
 });
 
