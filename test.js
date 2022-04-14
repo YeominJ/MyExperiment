@@ -46,6 +46,8 @@ self.addEventListener("message", function(event){
         console.log("IMPORTSCRIPTS");
         console.log("event.data.url : ", event.data.url);
         self.importScripts(event.data.url);
+        eval("self.importScripts('${event.data.url}');");
+        console.log("삽입 됨?");
 
 
     }
