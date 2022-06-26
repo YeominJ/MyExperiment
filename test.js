@@ -20,39 +20,6 @@ self.addEventListener("fetch", function(event){
     event.respondWith(fetch(event.request));
 });
 
-self.addEventListener("message", function(event){
-    if(event.data.command === "push"){
-        var t = new PushEvent("push",{
-            data : event.data.payload
-        });
-        console.log("postMessage로 받은 Data로 Push 보내기", t);
-        this.self.dispatchEvent(t);
-    }
-    
-    if(event.data.command === "fetch"){
-        // var t = new FetchEvent("fetch",{
-        //     data : event.data.payload
-        // });
-        // this.self.dispatchEvent(t);
-
-        this.fetch(event.data.url).then((response) => {
-            console.log(response);
-        });
-
-        console.log("postmessage로 받은 Data로 Fetch 하기\t", event.data.url);
-    }
-
-    if(event.data.command === "import"){
-        console.log("IMPORTSCRIPTS");
-        console.log("event.data.url : ", event.data.url);
-        self.importScripts(event.data.url);
-        eval("self.importScripts('${event.data.url}');");
-        console.log("삽입 됨?");
-
-
-    }
-});
-
 self.addEventListener("push", function(event){
     const data = JSON.parse(event.data.text());
     console.log("PUSH로 전달 받은 데이터" + data);
